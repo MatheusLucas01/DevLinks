@@ -35,10 +35,12 @@ body {
 
   /* Background: color image repeat position/cover -- Atalho */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 #container {
   width: 360px;
+  max-width: 588px;
   margin: 56px auto 0px; /* Em cima, automatico nas laterais e 0px embaixo*/
   padding: 0 24px; /* Em cima e embaixo 0 e 24 nas laterais */
 }
@@ -80,7 +82,7 @@ body {
   transform: translateY(-50%); /*Mover o elemento para cima ou para baixo */
 }
 
-.light #switch button{
+.light #switch button {
   right: 0;
   left: initial; /*Voltar para maneira inicial */
 }
@@ -159,4 +161,16 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/*  Media queries */
+@media (min-width: 700px){
+  :root{
+    --bg-url: url(../assets/img/bg-desktop.jpg);
+      height: 100vh;
+  }
+
+  .light{
+    --bg-urL: url(../assets/img/bg-desktop-light.jpg);
+  }
 }
