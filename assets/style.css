@@ -171,6 +171,6 @@ footer {
   }
 
   .light{
-    --bg-urL: url(../assets/img/bg-desktop-light.jpg);
+    --bg-url: url(img/bg-desktop-light.jpg);
   }
 }
