@@ -13,7 +13,7 @@ function toggleMode() {
     img.setAttribute("alt", "Imagem de perfil")
   } else {
     // se tiver sem light mode, mantém a imagem normal
-    img.setAttribute("src", "../assets/img/foto2.png")
+    img.setAttribute("src", "../assets/img/avatar.png")
     img.setAttribute("alt", "imagem de perfil")
   }
 }
