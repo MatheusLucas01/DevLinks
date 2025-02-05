@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-
 :root {
   /* Todo conteúdo que usar essa função será branco*/
   --text-color: white;
@@ -81,11 +80,18 @@ body {
   left: 0; /* Começar da esquerda */
   z-index: 1; /* */
   transform: translateY(-50%); /*Mover o elemento para cima ou para baixo */
+
+  animation: slide-back 0.4s;
+
+  &:hover {
+    outline: 8px solid var(--highlight-color);
+  }
 }
 
 .light #switch button {
   right: 0;
   left: initial; /*Voltar para maneira inicial */
+  animation: slide-in 0.4s forwards; /* Forwards mantém as propriedades */
 }
 
 #switch span {
@@ -126,17 +132,17 @@ ul li a {
   text-decoration: none; /* Nenhuma decoração */
   font-weight: 500;
   transition: background 0.2s; /* Irá fazer uma transição em todos os elementos em 0.5s */
-}
 
-/* Pseudo-selector */
-ul li a:hover {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.05
-  ); /* Red, green, blue, (alpha) transparência */
-  border: 1.5px solid var(--text-color);
+  /* Pseudo-selector */
+  &:hover {
+    background: rgba(
+      255,
+      255,
+      255,
+      0.05
+    ); /* Red, green, blue, (alpha) transparência */
+    border: 1.5px solid var(--text-color);
+  }
 }
 
 #social-links {
@@ -152,10 +158,11 @@ ul li a:hover {
   padding: 16px;
   transition: background 0.2s;
   border-radius: 50%;
-}
-#social-links a:hover {
-  background: var(--highlight-color);
-  padding: 16px;
+
+  &:hover {
+    background: var(--highlight-color);
+    padding: 16px;
+  }
 }
 
 footer {
@@ -165,13 +172,32 @@ footer {
 }
 
 /*  Media queries */
-@media (min-width: 700px){
-  :root{
+@media (min-width: 700px) {
+  :root {
     --bg-url: url(../assets/img/bg-desktop.jpg);
-      height: 100vh;
+    height: 100vh;
   }
 
-  .light{
+  .light {
     --bg-url: url(img/bg-desktop-light.jpg);
+  }
+}
+
+/* animations */
+@keyframes slide-in {
+  from {
+    left: 0; /* Começar */
+  }
+  to {
+    left: 50%; /* Terminar */
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
