@@ -36,7 +36,7 @@ body {
 
   /* Background: color image repeat position/cover -- Atalho */
   background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
+  height: 100vh; /* Toda a parte visivel da tela */
 }
 
 #container {
