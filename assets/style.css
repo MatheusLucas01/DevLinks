@@ -175,10 +175,12 @@ footer {
 @media (min-width: 700px) {
   :root {
     --bg-url: url(../assets/img/bg-desktop.jpg);
+    height: 100vh;
   }
 
   .light {
     --bg-url: url(img/bg-desktop-light.jpg);
+    height: 100vh;
   }
 }
 
